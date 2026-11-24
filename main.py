@@ -143,7 +143,7 @@ def process_image(
     # 转为 uint8 类型
     convolution_result_save = convolution_result.astype(numpy.uint8)
     convolution_result_save_path_normalized: str = (f"{new_algorithm_folder_path}/"
-                                                    f"normalized/"
+                                                    # f"normalized/"
                                                     f"{original_image_name}_k_{kernel_size}.png")
     skimage.io.imsave(
         convolution_result_save_path_normalized,
@@ -242,17 +242,17 @@ def process_images_in_folder(
         ./threshold
     """
     original_image_folder_path: str = os.path.join(image_root_path, "base")
-    canny_image_folder_path: str = os.path.join(image_root_path, "canny")
+    # canny_image_folder_path: str = os.path.join(image_root_path, "canny")
     new_algorithm_folder_path: str = os.path.join(image_root_path, "new_algorithm")
-    new_algorithm_convolution_folder_path: str = os.path.join(new_algorithm_folder_path, "non_threshold")
-    new_algorithm_normalized_folder_path: str = os.path.join(new_algorithm_folder_path, "normalized")
-    new_algorithm_threshold_folder_path: str = os.path.join(new_algorithm_folder_path, "threshold")
+    # new_algorithm_convolution_folder_path: str = os.path.join(new_algorithm_folder_path, "non_threshold")
+    # new_algorithm_normalized_folder_path: str = os.path.join(new_algorithm_folder_path, "normalized")
+    # new_algorithm_threshold_folder_path: str = os.path.join(new_algorithm_folder_path, "threshold")
 
     # 创建文件夹（如果不存在）
-    os.makedirs(canny_image_folder_path, exist_ok=True)
-    os.makedirs(new_algorithm_convolution_folder_path, exist_ok=True)
-    os.makedirs(new_algorithm_normalized_folder_path, exist_ok=True)
-    os.makedirs(new_algorithm_threshold_folder_path, exist_ok=True)
+    # os.makedirs(canny_image_folder_path, exist_ok=True)
+    # os.makedirs(new_algorithm_convolution_folder_path, exist_ok=True)
+    # os.makedirs(new_algorithm_normalized_folder_path, exist_ok=True)
+    # os.makedirs(new_algorithm_threshold_folder_path, exist_ok=True)
 
         # =========================== Process Images ==========================
     results: list[tuple[str, str]] = []
