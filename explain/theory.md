@@ -134,6 +134,19 @@ $F_{Sigmoid}(2) = 0.95$，即 $斜率=k=\log_{e}(\frac{0.1}{1.9})$。
 
 ### 6. 扩展
 $$
-Output = F_{\text{Threshold}}(F_{\text{Localization}_{convolutionHere}}(F_{\text{Compare}} \cdot F_{\text{Weight}_{Distribution}} \cdot F_{\text{Direction}}))
+Output = F_{\text{Threshold}}(F_{\text{Localization}_{convolutionHere}}
+(
+    F_{\text{Compare}}(F_{\text{Direction}}))
+    \cdot F_{\text{Weight}_{Distribution}}
+)
+$$
+OR
+$$
+Output = F_{\text{Threshold}}(F_{\text{Localization}_{convolutionHere}}
+(
+    F_{\text{Direction}}
+    \cdot F_{\text{Compare}}
+    \cdot F_{\text{Weight}_{Distribution}}
+)
 $$
 所有的组件都可以替换。

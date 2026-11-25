@@ -68,6 +68,9 @@ def is_image_file(file_name: str) -> bool:
 
     return any(mime.mime_type.startswith("image/") for mime in file_mime_type)
 
+
+
+
 def process_image(
     original_image_path: str,
     # canny_image_folder_path: str,
